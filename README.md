@@ -28,10 +28,19 @@ npm run build
 
 ## QR code
 
-Generate a QR code pointing to:
+The QR code files are in `public/`:
+
+- `public/qr-code.png` — use this on printed certificates
+- `public/qr-code.svg` — vector version for design tools
+
+Both link to:
 
 ```
 https://pypuri9988.github.io/CHAPTER_CCDI/
 ```
 
-Place that QR on your printed certificate (as shown in your certificate design).
+Regenerate anytime:
+
+```bash
+npm run generate:qr
+```

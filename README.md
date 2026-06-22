@@ -8,6 +8,19 @@ Official QR verification page for **CHAPTER CCDI** internship completion certifi
 
 When someone scans the QR code on a certificate, they are taken to this URL.
 
+## Fix GitHub Pages settings (required once)
+
+Your site must **not** use a custom domain and must **not** deploy from repo root.
+
+1. Open **Settings → Pages** in GitHub
+2. Under **Build and deployment**:
+   - **Recommended:** set **Source** to **GitHub Actions**
+   - **Or:** set **Source** to **Deploy from a branch** → Branch `main` → Folder **`/docs`** (NOT `/root`)
+3. Leave **Custom domain** empty
+4. Save and wait 2–5 minutes
+
+If the browser still opens the old custom domain, clear cache or try an incognito/private window.
+
 ## Local development
 
 ```bash
@@ -21,13 +34,15 @@ npm run dev
 npm run build
 ```
 
+Build for GitHub Pages branch deploy (`docs/` folder):
+
+```bash
+npm run build:pages
+```
+
 ## Deploy (GitHub Pages)
 
-1. Push this repo to GitHub (`main` branch).
-2. Go to **Settings → Pages**.
-3. Set **Source** to **GitHub Actions**.
-4. Make sure **Custom domain** is empty (no custom domain configured).
-5. Push to `main` — the workflow builds and deploys automatically.
+Push to `main`. The GitHub Actions workflow builds and deploys automatically when **Source** is set to **GitHub Actions**.
 
 ## QR code
 
@@ -46,4 +61,5 @@ Regenerate anytime:
 
 ```bash
 npm run generate:qr
+npm run build:pages
 ```

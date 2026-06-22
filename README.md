@@ -4,9 +4,11 @@ Official QR verification page for **CHAPTER CCDI** internship completion certifi
 
 ## Live website
 
+Use **only** this URL:
+
 **https://pypuri9988.github.io/CHAPTER_CCDI/**
 
-When someone scans the QR code on a certificate, they are taken to this URL.
+Do **not** use `www.chapterccdiinternship.com` — that domain is not purchased and will not work.
 
 ## Fix GitHub Pages settings (required once)
 

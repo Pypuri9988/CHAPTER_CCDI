@@ -4,24 +4,23 @@ Official QR verification page for **CHAPTER CCDI** internship completion certifi
 
 ## Live website
 
-Use **only** this URL:
-
 **https://pypuri9988.github.io/CHAPTER_CCDI/**
 
-Do **not** use `www.chapterccdiinternship.com` — that domain is not purchased and will not work.
+Do **not** use `www.chapterccdiinternship.com` — that domain is not purchased.
 
-## Fix GitHub Pages settings (required once)
+## If your browser still opens the old custom domain
 
-Your site must **not** use a custom domain and must **not** deploy from repo root.
+GitHub previously redirected this site to a custom domain. Your browser may have cached that redirect.
 
-1. Open **Settings → Pages** in GitHub
-2. Under **Build and deployment**:
-   - **Recommended:** set **Source** to **GitHub Actions**
-   - **Or:** set **Source** to **Deploy from a branch** → Branch `main` → Folder **`/docs`** (NOT `/root`)
-3. Leave **Custom domain** empty
-4. Save and wait 2–5 minutes
+1. Open an **Incognito / InPrivate** window
+2. Paste this exact URL: `https://pypuri9988.github.io/CHAPTER_CCDI/`
+3. Or clear browser cache for `github.io` in Edge:
+   - Settings → Privacy → Clear browsing data → Cached images and files
 
-If the browser still opens the old custom domain, clear cache or try an incognito/private window.
+## GitHub Pages settings
+
+- **Source:** GitHub Actions (set automatically by deploy workflow)
+- **Custom domain:** must stay empty
 
 ## Local development
 
@@ -36,32 +35,17 @@ npm run dev
 npm run build
 ```
 
-Build for GitHub Pages branch deploy (`docs/` folder):
-
-```bash
-npm run build:pages
-```
-
-## Deploy (GitHub Pages)
-
-Push to `main`. The GitHub Actions workflow builds and deploys automatically when **Source** is set to **GitHub Actions**.
-
 ## QR code
 
-The QR code files are in `public/`:
+Files in `public/`:
 
-- `public/qr-code.png` — use this on printed certificates
-- `public/qr-code.svg` — vector version for design tools
+- `public/qr-code.png`
+- `public/qr-code.svg`
 
-Both link to:
+Both link to `https://pypuri9988.github.io/CHAPTER_CCDI/`
 
-```
-https://pypuri9988.github.io/CHAPTER_CCDI/
-```
-
-Regenerate anytime:
+Regenerate:
 
 ```bash
 npm run generate:qr
-npm run build:pages
 ```

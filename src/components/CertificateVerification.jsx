@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import {
   Award,
   Calendar,
+  CalendarRange,
   CheckCircle2,
   Globe,
   GraduationCap,
@@ -18,6 +19,7 @@ import './CertificateVerification.css';
 const CERTIFICATE = {
   organization: 'CHAPTER CCDI',
   certificateType: 'Internship Completion Certificate',
+  internshipDuration: '16th February to 20th June 2026',
   msme: 'UDYAM-AP-12-0108690',
   issueDate: '22-Jun-2026',
   email: 'info.chapterccdi@gmail.com',
@@ -29,6 +31,11 @@ const DETAILS = [
     icon: GraduationCap,
     label: 'Certificate Type',
     value: CERTIFICATE.certificateType,
+  },
+  {
+    icon: CalendarRange,
+    label: 'Internship Duration',
+    value: CERTIFICATE.internshipDuration,
   },
   {
     icon: Calendar,
